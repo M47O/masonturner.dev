@@ -1,8 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { sdsMonotone } from '../lib/fonts/fonts'
+import Terminal from './components/Terminal/Terminal'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={sdsMonotone.className}>
+        <Terminal/></body>
     </html>
   )
 }
