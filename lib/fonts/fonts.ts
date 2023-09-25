@@ -16,7 +16,7 @@ export const sdsMonotone = localFont({
             {
               path: './sdsmonotone-light-webfont.woff2',
               weight: '100',
-              style: 'italic',
+              style: 'normal',
             },
-          ],
+        ],
 })
