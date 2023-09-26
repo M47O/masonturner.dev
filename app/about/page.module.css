@@ -1,0 +1,86 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 3em;
+    padding: 3vw;
+    font-size: 1rem;
+    overflow-y: scroll;
+}
+
+.systemLog{
+    font-size: 1rem;
+}
+
+
+.blurb {
+    font-size: 0.95rem;
+    margin-bottom: 1em;
+
+    animation: fadeIn 2s ease forwards
+}
+
+.hr {
+    border: 1px solid var(--terminal-color);
+    border-radius: 100px;
+    opacity: 90%;
+    width: 50%;
+    align-self: center;
+    margin-bottom: 1em;
+}
+
+.buttonContainer {
+    position: relative;
+    padding: 10px;
+    align-self: center;
+}
+
+.homeButton{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.corner {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.cornerTopLeft {
+    top: 0;
+    left: 0;
+    border-top: 2px solid var(--terminal-color);
+    border-left: 2px solid var(--terminal-color);
+}
+
+.cornerTopRight{
+    top: 0;
+    right: 0;
+    border-top: 2px solid var(--terminal-color);
+    border-right: 2px solid var(--terminal-color);
+}
+
+.cornerBottomRight{
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid var(--terminal-color);
+    border-right: 2px solid var(--terminal-color);
+}
+
+.cornerBottomLeft{
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid var(--terminal-color);
+    border-left: 2px solid var(--terminal-color);
+}
+
+.buttonContainer:hover .corner {
+    width: 55%;
+    height: 50%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0% }
+    to { opacity: 100% }
+}

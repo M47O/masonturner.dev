@@ -1,0 +1,40 @@
+.heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 0.8em;
+}
+
+.system{
+    padding: 3px;
+    background: var(--terminal-color);
+    color: var(--background);
+    border-radius: 0 0px 6px 0;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-size: 0.75rem;
+
+    flex-grow: 0;
+}
+
+.section{
+    font-size: 1rem;
+    position: relative;
+}
+
+.section::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--background);
+    animation: typewriter 1s forwards;
+}
+
+@keyframes typewriter {
+    to{
+        transform: translateX(100px)
+    }
+}
