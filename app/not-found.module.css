@@ -1,0 +1,67 @@
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5em;
+    height: 100%;
+    padding: 0 3em;
+}
+
+.error{
+    text-align: center;
+}
+
+.errorNumber{
+    font-weight: 700
+}
+
+.buttonContainer {
+    position: relative;
+    padding: 10px;
+}
+
+.homeButton{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.corner {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.cornerTopLeft {
+    top: 0;
+    left: 0;
+    border-top: 2px solid var(--terminal-color);
+    border-left: 2px solid var(--terminal-color);
+}
+
+.cornerTopRight{
+    top: 0;
+    right: 0;
+    border-top: 2px solid var(--terminal-color);
+    border-right: 2px solid var(--terminal-color);
+}
+
+.cornerBottomRight{
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid var(--terminal-color);
+    border-right: 2px solid var(--terminal-color);
+}
+
+.cornerBottomLeft{
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid var(--terminal-color);
+    border-left: 2px solid var(--terminal-color);
+}
+
+.buttonContainer:hover .corner {
+    width: 55%;
+    height: 50%;
+}
