@@ -1,6 +1,8 @@
 /*
   1. Reset
   2. Global variables
+  3. Global styles
+  4. Keyframe declarations
 */
 
 /* 1. Reset */
@@ -34,4 +36,46 @@ p, h1, h2, h3, h4, h5, h6 {
   --font-color: #b6d53c;
   --terminal-color: #b6d53c;
   --error-color: #e6482e;
+}
+
+/* 3. Global styles */
+body, html {
+  height: 100dvh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-color);
+    background: var(--background)
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover{
+  animation: blurOnHover 0.3s;
+}
+
+
+/* 4. Keyframe declarations */
+@keyframes blurOnHover {
+	0% {
+		filter: blur(0px);
+	}
+
+	30% {
+		filter: blur(2px);
+	}
+
+	100% {
+		filter: blur(0px);
+	}
 }

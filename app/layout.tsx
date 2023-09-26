@@ -16,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={sdsMonotone.className}>
-        <Terminal/></body>
+        <Terminal>
+          {children}
+        </Terminal>
+      </body>
     </html>
   )
 }
