@@ -25,7 +25,7 @@ export default function Breadcrumb() {
 
     return (
         <span className={styles.breadcrumb}>
-            {pathname === '/' ? '~/' : <Link href="/">~</Link>}
+            {pathname === '/' ? <><Link href="/">~</Link>/</> : <Link href="/">~</Link>}
             {breadcrumbLinks}
         </span>
     )
