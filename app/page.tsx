@@ -10,6 +10,5 @@ export default function Home() {
         <li><Link href="/settings" className={styles.link}>settings</Link></li>
       </ul>
     </div>
-      
   )
 }
