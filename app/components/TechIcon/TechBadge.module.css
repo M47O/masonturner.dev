@@ -1,0 +1,99 @@
+.badge {
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 1px 8px;
+    gap: 5px;
+    border-radius: 6px;
+}
+
+.cloudinary {
+    background: hsla(173, 55%, 80%, 0.15);
+    color: hsla(177, 56%, 92%);
+}
+
+.css {
+    background: hsla(206, 49%, 44%, 0.3);
+    color: hsla(186, 74%, 52%, 1);
+}
+
+.express {
+    background: hsla(27, 5%, 68%, 0.15);
+    color: hsla(27, 8%, 63%, 1);
+}
+
+.javascript {
+    background: hsla(42, 75%, 58%, 0.15);
+    color: hsla(42, 92%, 53%, 1);
+}
+
+.jwt {
+    background: hsla(27, 68%, 90%, 0.15);
+    color: hsla(27, 86%, 84%, 1);
+}
+
+.mongodb {
+    background:  hsla(134, 25%, 40%, 0.15);
+    color: hsla(134, 33%, 36%, 1);
+}
+
+.mongoose {
+    background: hsla(3, 35%, 50%, 0.15);
+    color: hsla(3, 49%, 45%, 1);
+}
+
+.netlify {
+    background:  hsla(193, 60%, 80%, 0.15);
+    color: hsla(193, 74%, 76%, 1);
+}
+
+.nextjs {
+    background: hsla(342, 5%, 20%, 0.15);
+    color: hsla(177, 56%, 92%);
+}
+
+.node {
+    background: hsla(74, 45%, 62%, 0.15);
+    color: hsla(74, 60%, 57%, 1);
+}
+
+.openai {
+    background: hsla(30, 10%, 85%, 0.15);
+    color: hsla(30, 14%, 80%, 1);
+}
+
+.postgresql {
+    background: hsla(211, 40%, 44%, 0.15);
+    color: hsla(211, 50%, 39%, 1);
+}
+
+.railway {
+    background: hsla(303, 28%, 50%, 0.15);
+    color: hsla(303, 36%, 45%, 1);
+}
+
+.react {
+    background: hsla(190, 73%, 44%, 0.15);
+    color: hsla(186, 74%, 52%, 1)
+}
+
+.tailwind {
+    background:hsla(142, 72%, 29%, 0.15);
+    color: hsla(142, 77%, 73%);
+}
+
+.typescript {
+    background-color: hsla(193, 82%, 31%, 0.15);
+    color: hsla(212, 96%, 78%);
+}
+
+.vercel {
+    background: hsla(342, 5%, 20%, 0.15);
+    color: hsla(177, 56%, 92%);
+}
+
+.vite {
+    background: hsla(263, 13%, 62%, 0.15);
+    color: hsla(263, 18%, 57%, 1);
+}
