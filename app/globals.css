@@ -51,6 +51,15 @@ body {
     background: var(--background)
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
+*::selection{
+  background-color: var(--terminal-color);
+  color: var(--background)
+}
+
 ul {
   list-style: none;
   padding-left: 0;
