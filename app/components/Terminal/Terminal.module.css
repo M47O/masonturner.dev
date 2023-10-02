@@ -10,9 +10,9 @@
     display: flex;
     position: relative;
     max-height: 90%;
-    height: 60%;
+    height: 80%;
     min-height: 400px;
-    width: 40%;
+    width: 60%;
     min-width: 300px;
     margin: 5px;
 }
@@ -158,8 +158,8 @@
     }
 
     .container {
-        min-height: 400px;
         height: fit-content;
+        width: 40%;
     }
 
     .header {
