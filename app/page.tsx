@@ -10,7 +10,7 @@ export default function Home() {
         <li className={styles.settings}>
           <Link href="/" className={styles.link}>
             settings
-            <span className={styles.comingsoon}> /* coming soon */</span> {/* es-lint-disable-line */}
+            <span className={styles.comingsoon}> /* coming soon */ </span>
           </Link>
         </li>
         <div className={styles.feedContainer}>
