@@ -8,7 +8,6 @@
 
 .container {
     display: flex;
-    flex-direction: column;
     position: relative;
     max-height: 90%;
     height: 60%;
@@ -89,7 +88,49 @@
 }
 
 .breadcrumb {
+    display: none;
     z-index: 1;
+}
+
+.back {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    border: 1px solid var(--terminal-color);
+    cursor: pointer;
+    border-radius: 0 0 3px 0;
+    font-size: 1.5rem;
+    width: fit-content;
+}
+
+.back::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0px;
+    overflow: hidden;
+    z-index: -1;
+    background: var(--terminal-color);
+}
+
+.back:hover {
+    transition: color 700ms;
+    color: var(--background);
+}
+
+.back:hover::after{
+    animation: slideIn 700ms ease both;
+}
+
+.backText{
+    font-size: 1rem;
+    position: relative;
+    top: 2px;
+    text-transform: lowercase;
 }
 
 .time {
@@ -104,4 +145,24 @@
     min-width: 10px;
     z-index: 1;
     font-weight: lighter;
+}
+
+@keyframes slideIn {
+    from {width: 0}
+    to { width: 100%}
+}
+
+@media (min-width: 1200px) {
+    .breadcrumb {
+        display: block;
+    }
+
+    .container {
+        min-height: 400px;
+        height: fit-content;
+    }
+
+    .header {
+        font-size: 0.85rem;
+    }
 }
