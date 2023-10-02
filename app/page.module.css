@@ -1,8 +1,13 @@
+.comingsoon {
+    font-size: 0.9rem;
+}
+
 .container{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    width: 100%;
     padding-left: 3vw;
     padding-right: 3vw;
 }
@@ -23,4 +28,210 @@
 .link:hover {
     background: var(--terminal-color);
     color: var(--background)
+}
+
+.feedContainer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    width: 110px;
+	height: 110px;
+	border: 2px solid #b6d53c;
+	background: rgba(182, 213, 60, 0.15);
+	border-radius: 20px 0 0 0;
+	overflow: hidden;
+	z-index: 10;
+}
+
+.feedOverlay {
+	background: linear-gradient(
+		rgba(182, 213, 60, 0.3),
+		rgba(182, 213, 60, 0.3) 2px,
+		transparent 2px,
+		transparent 4px,
+		rgba(182, 213, 60, 0.3) 4px,
+		rgba(182, 213, 60, 0.3) 5px,
+		transparent 5px,
+		transparent 6px
+	);
+	background-size: 100% 6px;
+	height: 100%;
+	width: 100%;
+	animation: panOverlay 17s infinite linear;
+	position: absolute;
+	z-index: 2;
+	left: 0px;
+	top: 0px;
+	opacity: 0.3;
+}
+
+.feed {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-size: 300%;
+	background-position: 0% 0%;
+	filter: sepia(100%) hue-rotate(60deg);
+	opacity: 0;
+	animation: pan-image 15s linear infinite;
+	transition: opacity 0.5s;  
+}
+
+.standBy{
+    position: relative;
+    z-index: 0;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0 4px;
+}
+
+.corner {
+    position: absolute;
+    max-width: 10px;
+    max-height: 10px;
+    height: 6vw;
+    width: 6vw;
+}
+
+.cornerTopLeft {
+    top: 0;
+    left: 0;
+    border-top: 1px solid #b6d53c;
+    border-left: 1px solid #b6d53c;
+}
+
+.cornerBottomRight {
+    bottom: 3px;
+    right: 0;
+    border-bottom: 1px solid #b6d53c;
+    border-right: 1px solid #b6d53c;
+}
+
+.feedAbout{
+	background-image: url('/feed/me.jpg');
+    animation: none;
+    background-position: center;
+    background-size: cover;
+}
+
+.feedProjects{
+	background-image: url('/feed/code.jpg');
+}
+
+.feedGithub{
+	background-image: url('/feed/github.jpg');
+}
+
+.feedSettings{
+	background-image: url('/feed/settings.jpg');
+}
+
+.about:hover ~ .feedContainer .feedAbout,
+.projects:hover ~ .feedContainer .feedProjects,
+.github:hover ~ .feedContainer .feedGithub,
+.settings:hover ~ .feedContainer .feedSettings,
+.list > li:hover ~ .feedContainer .feedOverlay{ 
+	opacity: 0.6;
+}
+
+.list > li:hover ~ .feedContainer .standBy {
+    opacity: 0
+}
+
+@keyframes blurOnHover {
+	0% {
+		filter: blur(0px);
+	}
+
+	30% {
+		filter: blur(2px);
+	}
+
+	100% {
+		filter: blur(0px);
+	}
+}
+
+@keyframes panOverlay {
+	from {
+		background-position: 0% 0%;
+	}
+
+	to {
+		background-position: 0% -100%;
+	}
+}
+
+@keyframes pan-image {
+	0% {
+		background-position: 36% 42%;
+		background-size: 200%;
+	}
+
+	20% {
+		background-position: 30% 35%;
+		background-size: 200%;
+	}
+
+	20.0001% {
+		/* -- View 2 -- */
+		background-position: 60% 85%;
+		background-size: 500%;
+	}
+
+	40% {
+		background-position: 49% 81%;
+		background-size: 500%;
+	}
+
+	40.0001% {
+		/* -- View 3 -- */
+		background-position: 80% 42%;
+		background-size: 300%;
+	}
+
+	60% {
+		background-position: 84% 33%;
+		background-size: 300%;
+	}
+
+	60.0001% {
+		/* -- View 4 -- */
+		background-position: 0% 0%;
+		background-size: 300%;
+	}
+
+	80% {
+		background-position: 15% 4%;
+		background-size: 300%;
+	}
+
+	80.0001% {
+		/* -- View 5 -- */
+		background-position: 80% 10%;
+		background-size: 300%;
+	}
+
+	100% {
+		background-position: 72% 14%;
+		background-size: 300%;
+	}
+}
+
+@media (min-width: 1200px){
+    .feedContainer {
+        display: flex;
+    }
+    
+    .list {
+        font-size: 1.2rem;
+        gap: 15px;
+    }
 }
