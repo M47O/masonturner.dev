@@ -22,7 +22,12 @@ export default function Project({src, site, repo, title, description, technologi
                 <div className={`${styles.corner} ${styles.cornerTopRight}`}></div>
                 <div className={`${styles.corner} ${styles.cornerBottomRight}`}></div>
                 <div className={`${styles.corner} ${styles.cornerBottomLeft}`}></div>
-                <Image className={styles.img} src={src} alt={`Demo image of ${title}`} />
+                <Image 
+                    className={styles.img} 
+                    src={src} 
+                    alt={`Demo image of ${title}`}
+                    height={500}
+                    width={500} />
                 <div className={styles.projectLinks} onClick={(e) => e.stopPropagation()}>
                     <a href={repo} target='_blank'>
                         <GitHubIcon className={styles.icon} />
