@@ -5,6 +5,7 @@ import { CiMinimize1 as Minimize} from 'react-icons/ci'
 import styles from "./Project.module.css"
 import { useState } from 'react'
 import TechIcon from '../TechIcon/TechBadge'
+import Image from 'next/image'
 import type { ProjectProps } from '@/lib/projects'
 
 export default function Project({src, site, repo, title, description, technologies }: ProjectProps){
@@ -21,7 +22,7 @@ export default function Project({src, site, repo, title, description, technologi
                 <div className={`${styles.corner} ${styles.cornerTopRight}`}></div>
                 <div className={`${styles.corner} ${styles.cornerBottomRight}`}></div>
                 <div className={`${styles.corner} ${styles.cornerBottomLeft}`}></div>
-                <img className={styles.img} src={src} alt={`Demo image of ${title}`} />
+                <Image className={styles.img} src={src} alt={`Demo image of ${title}`} />
                 <div className={styles.projectLinks} onClick={(e) => e.stopPropagation()}>
                     <a href={repo} target='_blank'>
                         <GitHubIcon className={styles.icon} />
@@ -35,7 +36,7 @@ export default function Project({src, site, repo, title, description, technologi
                     onClick={(e) => e.stopPropagation()}
                 >
                     <div className={styles.techContainer}>
-                        {technologies.map(tech => <TechIcon tech={tech}/>)}
+                        {technologies.map(tech => <TechIcon key={tech} tech={tech}/>)}
                     </div>
                     <hr className={styles.hr}/>
                     <p className={styles.description}>{description}</p>
