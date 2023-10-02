@@ -26,7 +26,7 @@ export type Category =
 
 export type ProjectProps = {
   category: Category,
-  src?: `/projects/${string}.webp`
+  src: `/projects/${string}.webp`
   site: `https://${string}`;
   repo: `https://github.com/M47O/${string}`;
   title: string;
