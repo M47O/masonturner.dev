@@ -7,7 +7,12 @@ export default function Home() {
         <li className={styles.about}><Link href="/about" className={`${styles.link}`}>about me</Link></li>
         <li className={styles.projects}><Link href="/projects" className={styles.link}>projects</Link></li>
         <li className={styles.github}><a href="https://github.com/M47O" className={styles.link}>github</a></li>
-        <li className={styles.settings}><Link href="/" className={styles.link}>settings<span className={styles.comingsoon}> /* coming soon */</span></Link> </li>
+        <li className={styles.settings}>
+          <Link href="/" className={styles.link}>
+            settings
+            <span className={styles.comingsoon}> /* coming soon */</span> {/* es-lint-disable-line */}
+          </Link>
+        </li>
         <div className={styles.feedContainer}>
 					<div className={`${styles.feed} ${styles.feedAbout}`} />
 					<div className={`${styles.feed} ${styles.feedProjects}`} />
