@@ -1,7 +1,7 @@
 import styles from './page.module.css'
 import Link from 'next/link'
 
-export default function About() {
+export default function Projects() {
   return (
     <div className={styles.container}>
     <ul className={styles.list}>
