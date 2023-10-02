@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
     padding-left: 3vw;
     padding-right: 3vw;
+    width: 100%;
 }
 
 .list {
@@ -29,5 +29,15 @@
 
 .link:hover {
     background: var(--terminal-color);
-    color: var(--background)
+    color: var(--background);
+}
+
+@media (min-width: 1200px){
+    .list {
+        font-size: 1.2rem;
+    }
+
+    .subtitle{
+        font-size: 0.85rem;
+    }
 }
