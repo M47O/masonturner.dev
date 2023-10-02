@@ -1,11 +1,10 @@
 .about{
     display: flex;
     flex-direction: column;
-    height: 100%;
     margin-top: 3em;
     padding: 3vw;
     font-size: 1rem;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .systemLog{
@@ -16,7 +15,6 @@
 .blurb {
     font-size: 0.95rem;
     margin-bottom: 1em;
-
     animation: fadeIn 2s ease forwards
 }
 
