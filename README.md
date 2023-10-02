@@ -1,7 +1,7 @@
 # masonturner.dev
 masonturner.dev is my new, updated portfolio built with Next.js's new App Router, React, and TypeScript. 
 
-<img src="/masonturnerdev.gif" alt="Demo of masonturner.dev" width="725">
+<img style="center" src="/masonturnerdev.png" alt="Demo of masonturner.dev" width="725">
 
 **Check it out!:** http://masonturner.dev/
 
